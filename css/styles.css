@@ -1,0 +1,185 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #c0c0c0;
+  font-family: Montserrat, sans-serif;
+}
+
+header {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 60px;
+}
+header img {
+  width: 400px;
+}
+
+main {
+  height: 70vh;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 30px;
+}
+.container button {
+  width: 350px;
+  height: 85px;
+  border-radius: 10px;
+  color: red;
+  -webkit-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.5);
+          box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.5);
+  font-family: Montserrat, sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.overlay-schedule, .overlay-contact, .overlay-social-media {
+  background: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  visibility: hidden;
+}
+.overlay-schedule.active, .overlay-contact.active, .overlay-social-media.active {
+  visibility: visible;
+}
+.overlay-schedule .popup-schedule, .overlay-schedule .popup-contact, .overlay-schedule .popup-social-media, .overlay-contact .popup-schedule, .overlay-contact .popup-contact, .overlay-contact .popup-social-media, .overlay-social-media .popup-schedule, .overlay-social-media .popup-contact, .overlay-social-media .popup-social-media {
+  width: 350px;
+  height: 500px;
+  background: #ffffff;
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  text-align: center;
+  -webkit-transition: 0.6s ease all;
+  transition: 0.6s ease all;
+  -webkit-transform: scale(0.7);
+          transform: scale(0.7);
+  opacity: 0;
+}
+.overlay-schedule .popup-schedule.active, .overlay-schedule .popup-contact.active, .overlay-schedule .popup-social-media.active, .overlay-contact .popup-schedule.active, .overlay-contact .popup-contact.active, .overlay-contact .popup-social-media.active, .overlay-social-media .popup-schedule.active, .overlay-social-media .popup-contact.active, .overlay-social-media .popup-social-media.active {
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+.overlay-schedule .popup-schedule.active h3, .overlay-schedule .popup-contact.active h3, .overlay-schedule .popup-social-media.active h3, .overlay-contact .popup-schedule.active h3, .overlay-contact .popup-contact.active h3, .overlay-contact .popup-social-media.active h3, .overlay-social-media .popup-schedule.active h3, .overlay-social-media .popup-contact.active h3, .overlay-social-media .popup-social-media.active h3 {
+  -webkit-animation: enterTitle 0.8s ease 0.5s forwards;
+          animation: enterTitle 0.8s ease 0.5s forwards;
+}
+.overlay-schedule .popup-schedule.active ul, .overlay-schedule .popup-contact.active ul, .overlay-schedule .popup-social-media.active ul, .overlay-contact .popup-schedule.active ul, .overlay-contact .popup-contact.active ul, .overlay-contact .popup-social-media.active ul, .overlay-social-media .popup-schedule.active ul, .overlay-social-media .popup-contact.active ul, .overlay-social-media .popup-social-media.active ul {
+  -webkit-animation: enterList 0.8s ease 0.5s forwards;
+          animation: enterList 0.8s ease 0.5s forwards;
+}
+.overlay-schedule .popup-schedule .btn-close-schedule, .overlay-schedule .popup-schedule .btn-close-contact, .overlay-schedule .popup-schedule .btn-close-social-media, .overlay-schedule .popup-contact .btn-close-schedule, .overlay-schedule .popup-contact .btn-close-contact, .overlay-schedule .popup-contact .btn-close-social-media, .overlay-schedule .popup-social-media .btn-close-schedule, .overlay-schedule .popup-social-media .btn-close-contact, .overlay-schedule .popup-social-media .btn-close-social-media, .overlay-contact .popup-schedule .btn-close-schedule, .overlay-contact .popup-schedule .btn-close-contact, .overlay-contact .popup-schedule .btn-close-social-media, .overlay-contact .popup-contact .btn-close-schedule, .overlay-contact .popup-contact .btn-close-contact, .overlay-contact .popup-contact .btn-close-social-media, .overlay-contact .popup-social-media .btn-close-schedule, .overlay-contact .popup-social-media .btn-close-contact, .overlay-contact .popup-social-media .btn-close-social-media, .overlay-social-media .popup-schedule .btn-close-schedule, .overlay-social-media .popup-schedule .btn-close-contact, .overlay-social-media .popup-schedule .btn-close-social-media, .overlay-social-media .popup-contact .btn-close-schedule, .overlay-social-media .popup-contact .btn-close-contact, .overlay-social-media .popup-contact .btn-close-social-media, .overlay-social-media .popup-social-media .btn-close-schedule, .overlay-social-media .popup-social-media .btn-close-contact, .overlay-social-media .popup-social-media .btn-close-social-media {
+  font-size: 16px;
+  line-height: 16px;
+  display: block;
+  text-align: right;
+  color: #bbbbbb;
+  -webkit-transition: 0.3s ease all;
+  transition: 0.3s ease all;
+}
+.overlay-schedule .popup-schedule .btn-close-schedule:hover, .overlay-schedule .popup-schedule .btn-close-contact:hover, .overlay-schedule .popup-schedule .btn-close-social-media:hover, .overlay-schedule .popup-contact .btn-close-schedule:hover, .overlay-schedule .popup-contact .btn-close-contact:hover, .overlay-schedule .popup-contact .btn-close-social-media:hover, .overlay-schedule .popup-social-media .btn-close-schedule:hover, .overlay-schedule .popup-social-media .btn-close-contact:hover, .overlay-schedule .popup-social-media .btn-close-social-media:hover, .overlay-contact .popup-schedule .btn-close-schedule:hover, .overlay-contact .popup-schedule .btn-close-contact:hover, .overlay-contact .popup-schedule .btn-close-social-media:hover, .overlay-contact .popup-contact .btn-close-schedule:hover, .overlay-contact .popup-contact .btn-close-contact:hover, .overlay-contact .popup-contact .btn-close-social-media:hover, .overlay-contact .popup-social-media .btn-close-schedule:hover, .overlay-contact .popup-social-media .btn-close-contact:hover, .overlay-contact .popup-social-media .btn-close-social-media:hover, .overlay-social-media .popup-schedule .btn-close-schedule:hover, .overlay-social-media .popup-schedule .btn-close-contact:hover, .overlay-social-media .popup-schedule .btn-close-social-media:hover, .overlay-social-media .popup-contact .btn-close-schedule:hover, .overlay-social-media .popup-contact .btn-close-contact:hover, .overlay-social-media .popup-contact .btn-close-social-media:hover, .overlay-social-media .popup-social-media .btn-close-schedule:hover, .overlay-social-media .popup-social-media .btn-close-contact:hover, .overlay-social-media .popup-social-media .btn-close-social-media:hover {
+  color: #000000;
+}
+.overlay-schedule .popup-schedule h3, .overlay-schedule .popup-contact h3, .overlay-schedule .popup-social-media h3, .overlay-contact .popup-schedule h3, .overlay-contact .popup-contact h3, .overlay-contact .popup-social-media h3, .overlay-social-media .popup-schedule h3, .overlay-social-media .popup-contact h3, .overlay-social-media .popup-social-media h3 {
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  opacity: 0;
+}
+.overlay-schedule .popup-schedule ul, .overlay-schedule .popup-contact ul, .overlay-schedule .popup-social-media ul, .overlay-contact .popup-schedule ul, .overlay-contact .popup-contact ul, .overlay-contact .popup-social-media ul, .overlay-social-media .popup-schedule ul, .overlay-social-media .popup-contact ul, .overlay-social-media .popup-social-media ul {
+  list-style: none;
+  opacity: 0;
+}
+.overlay-schedule .popup-schedule ul li, .overlay-schedule .popup-contact ul li, .overlay-schedule .popup-social-media ul li, .overlay-contact .popup-schedule ul li, .overlay-contact .popup-contact ul li, .overlay-contact .popup-social-media ul li, .overlay-social-media .popup-schedule ul li, .overlay-social-media .popup-contact ul li, .overlay-social-media .popup-social-media ul li {
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+.overlay-schedule .popup-schedule ul li span, .overlay-schedule .popup-contact ul li span, .overlay-schedule .popup-social-media ul li span, .overlay-contact .popup-schedule ul li span, .overlay-contact .popup-contact ul li span, .overlay-contact .popup-social-media ul li span, .overlay-social-media .popup-schedule ul li span, .overlay-social-media .popup-contact ul li span, .overlay-social-media .popup-social-media ul li span {
+  font-weight: 600;
+}
+
+@-webkit-keyframes enterTitle {
+  0% {
+    -webkit-transform: translateY(-25px);
+            transform: translateY(-25px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes enterTitle {
+  0% {
+    -webkit-transform: translateY(-25px);
+            transform: translateY(-25px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes enterList {
+  0% {
+    -webkit-transform: translateY(25px);
+            transform: translateY(25px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 1;
+  }
+}
+@keyframes enterList {
+  0% {
+    -webkit-transform: translateY(25px);
+            transform: translateY(25px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 1;
+  }
+}
+p {
+  text-align: center;
+}
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Ferreteria 44</title>
+</head>
+<body>
+    <header>
+        <img src="img/ferre44.jpg" alt="Logo Ferreteria 44">
+    </header>
+    <main>
+        <section class="container">
+            <button class="open-popup-schedule" id="open-popup-schedule">Horario</button>
+            <button class="open-popup-contact" id="open-popup-contact">Contacto</button>
+            <button class="open-popup-social-media" id="open-popup-social-media">Redes Sociales</button>
+        </section>
+        <div class="overlay-schedule" id="overlay-schedule">
+            <div class="popup-schedule" id="popup-schedule">
+                <a href="#" class="btn-close-schedule" id="btn-close-schedule"><i class="fas fa-times"></i></a>
+                <h3>Horarios</h3>
+                <ul>
+                    <li><span>Lunes a Viernes:</span> 8:00hs a 19:00hs</li>
+                    <li><span>Sabados:</span> 8:00hs a 18:30hs</li>
+                    <li><span>Feriados:</span> 9:00hs a 13:00hs</li>
+                    <li><span>Domingos:</span> Cerrado</li>
+                </ul>
+            </div>
+        </div>
+        <div class="overlay-contact" id="overlay-contact">
+            <div class="popup-contact" id="popup-contact">
+                <a href="#" class="btn-close-contact" id="btn-close-contact"><i class="fas fa-times"></i></a>
+                <h3>Horarios</h3>
+                <ul>
+                    <li><a href="https://api.whatsapp.com/send?phone=5492215646539"><i class="fab fa-whatsapp-square"></i></a>WhatsApp</li>
+                    <li><a href="tel:02214703646"><i class="fas fa-phone-square-alt"></i></a>Telefono</li>
+                    <li><a href="mailto:ferreteria44@hotmail.com"><i class="fas fa-envelope-square"></i></a>Mail</li>
+                </ul>
+            </div>
+        </div>
+        <div class="overlay-social-media" id="overlay-social-media">
+            <div class="popup-social-media" id="popup-social-media">
+                <a href="#" class="btn-close-social-media" id="btn-close-social-media"><i class="fas fa-times"></i></a>
+                <h3>Horarios</h3>
+                <ul>
+                    <li><a href="https://www.instagram.com/ferreteria_44/"><i class="fab fa-instagram-square"></i></a>Instagram</li>
+                    <li><a href="https://www.facebook.com/ferreteria44"><i class="fab fa-facebook-square"></i></a>Facebook</li>
+                </ul>
+            </div>
+        </div>    
+    </main>
+    <footer>
+        <p>Made whit <i class="fas fa-heart"></i> by GB</p>
+    </footer>
+    <script src="asset/popup.js"></script>
+</body>
+</html>
