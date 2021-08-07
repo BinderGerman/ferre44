@@ -277,11 +277,3 @@ footer .fa-heart {
     100% {transform: translateY(0px);
         opacity: 1;}   
 }
-
-@media (min-width: 460px) {
-    /* Tablets */
-}
-
-@media (min-widht: 768px) {
-    /* Laptop */
-}
